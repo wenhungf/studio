@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>STUDIO · InkQuest</title>
+<meta name="description" content="STUDIO is InkQuest's magazine about building websites with AI: the skills, the know-how and the style.">
+<meta property="og:title" content="STUDIO · InkQuest">
+<meta property="og:description" content="A magazine about building websites with AI: the skills, the know-how and the style.">
+<meta property="og:image" content="covers/issue-01.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,800;1,6..96,500;1,6..96,800&family=Jost:wght@400;600;700&display=swap">
+<style>
+/* Layout: an issue rack. Masthead, one line on what STUDIO is, then covers newest-first. */
+:root{--ink:#241a2b;--ink2:#5d4e66;--paper:#fffaf7;--blush:#fde3ea;--hot:#d81b72;--deep:#8f1d55;--rule:#f0d5df;
+  --holo:linear-gradient(110deg,#f6a3c5 0%,#c9b3f2 35%,#86dcf3 65%,#f6c445 100%);
+  --disp:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;--sans:"Jost","Futura","Avenir Next",Arial,"Noto Sans TC","PingFang TC",sans-serif;--cond:"Anton","Impact",sans-serif;--han:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+*{box-sizing:border-box}
+html,body{background:var(--paper)}
+body{margin:0;color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+header{background:radial-gradient(120% 120% at 70% 0,#fff 0,#fde3ea 45%,#f6a3c5 100%);padding-block:28px 34px;border-bottom:1.5px solid var(--deep)}
+.top{display:flex;justify-content:space-between;font:700 11px var(--sans);letter-spacing:.28em;text-transform:uppercase;color:var(--deep)}
+h1{margin:6px 0 0;font-family:var(--disp);font-weight:800;font-size:clamp(84px,17vw,210px);line-height:.82;letter-spacing:-.02em;color:var(--hot);text-shadow:0 2px 0 #fff}
+.tag{font-family:var(--disp);font-style:italic;font-size:clamp(20px,2.6vw,30px);line-height:1.3;margin:16px 0 0;max-width:34ch}
+.tag i{color:var(--hot);font-weight:800}
+.zh{display:block;font-family:var(--han);font-style:normal;font-size:15px;color:var(--deep);margin-top:6px;letter-spacing:.04em}
+main{padding-block:34px 60px}
+.k{font:700 12px var(--sans);letter-spacing:.26em;text-transform:uppercase;color:var(--hot);display:flex;align-items:center;gap:12px;margin:0 0 18px}
+.k::after{content:"";flex:1;height:1.5px;background:var(--holo)}
+.rack{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:26px}
+.issue{display:grid;gap:12px;color:inherit;text-decoration:none}
+.issue .cv{border-radius:14px;overflow:hidden;box-shadow:0 18px 40px rgba(143,29,85,.25);transition:transform .25s,box-shadow .25s;aspect-ratio:3/2;background:var(--blush)}
+.issue .cv img{display:block;width:100%;height:100%;object-fit:cover}
+.issue:hover .cv,.issue:focus-visible .cv{transform:translateY(-4px) rotate(-.6deg);box-shadow:0 24px 50px rgba(143,29,85,.32)}
+.issue .no{font:700 11px var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--deep)}
+.issue h2{margin:0;font-family:var(--disp);font-weight:500;font-size:28px;line-height:1.1}
+.issue h2 i{color:var(--hot);font-weight:800}
+.issue p{margin:0;font-size:15px;color:var(--ink2)}
+.issue ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.issue li{font:600 11.5px var(--sans);letter-spacing:.06em;padding:3px 10px;border-radius:999px;background:#fff;border:1px solid var(--rule)}
+:focus-visible{outline:2.5px solid var(--hot);outline-offset:3px;border-radius:6px}
+footer{border-top:1.5px solid var(--ink);padding-block:16px 40px;font-size:13px;color:var(--ink2)}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <div class="top"><span>InkQuest · Web Craft</span><span>The magazine</span></div>
+  <h1>STUDIO</h1>
+  <p class="tag">Building websites with AI: the skills, the know-how, and <i>the style.</i><span class="zh">用 AI 打造網站：技能、訣竅，還有風格。</span></p>
+</div></header>
+<main><div class="wrap">
+  <p class="k">Issues</p>
+  <div class="rack">
+    <a class="issue" href="issue-01/">
+      <div class="cv"><img src="covers/issue-01.jpg" alt="STUDIO Issue 01 cover: an owl on a laptop, with coverlines about agents, mascots, GitHub and design rules" loading="lazy"></div>
+      <span class="no">Issue 01 · November 2026</span>
+      <h2>Your site, but <i>make it you.</i></h2>
+      <p>Agents that do the boring bits, a mascot only you have, GitHub decoded, ten design rules, and a free starter kit.<span class="zh">代理團隊、專屬吉祥物、GitHub 入門、十條設計規則，附免費工具包。</span></p>
+      <ul><li>Claude Code</li><li>Design</li><li>GitHub Pages</li><li>EN + 中文</li></ul>
+    </a>
+  </div>
+</div></main>
+<footer><div class="wrap">STUDIO is made by InkQuest English Coaching · Wen-Hung (Hikaru), Kaohsiung</div></footer>
+</body>
+</html>
