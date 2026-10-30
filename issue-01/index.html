@@ -1011,7 +1011,7 @@ function show(i,push){
   i=Math.max(0,Math.min(PAGES.length-1,i)); CUR=i;
   PAGES.forEach(function(p,j){ p.classList.toggle('on',j===i); });
   Array.prototype.forEach.call(document.querySelectorAll('.dots [data-go]'),function(b){ b.classList.toggle('on',+b.getAttribute('data-go')===i); });
-  if(push!==false){ var h='#'+PAGES[i].id; if(location.hash!==h) history.replaceState(null,'',h); }
+  if(push!==false){ var h='#'+PAGES[i].id; try{ if(location.hash!==h) history.replaceState(null,'',h); }catch(e){} }  /* sandboxed previews forbid history changes */
   window.scrollTo(0,0);
 }
 function buildNav(){
@@ -1034,8 +1034,8 @@ initExtras();
 (function(){ var b=$('zhBtn'), o1=b.querySelector('.o1'), o2=b.querySelector('.o2'); function fit(){ b.style.setProperty('--kw',o1.offsetWidth+'px'); b.style.setProperty('--kl',o2.offsetLeft+'px'); b.style.setProperty('--kw2',o2.offsetWidth+'px'); } fit(); if(document.fonts&&document.fonts.ready) document.fonts.ready.then(fit); window.addEventListener('resize',fit); })();
 $('zhBtn').onclick=function(){ setZh(this.getAttribute('aria-checked')!=='true'); };
 if(lsGet('studio-zh')==='1') setZh(true);
-var start=0; PAGES.forEach(function(p,i){ if('#'+p.id===location.hash) start=i; }); show(start,false);
-window.addEventListener('hashchange',function(){ PAGES.forEach(function(p,i){ if('#'+p.id===location.hash&&i!==CUR) show(i,false); }); });
+var start=0, hash=''; try{ hash=location.hash; }catch(e){} PAGES.forEach(function(p,i){ if('#'+p.id===hash) start=i; }); show(start,false);
+window.addEventListener('hashchange',function(){ var h=''; try{ h=location.hash; }catch(e){} PAGES.forEach(function(p,i){ if('#'+p.id===h&&i!==CUR) show(i,false); }); });
 </script>
 </body>
 </html>
