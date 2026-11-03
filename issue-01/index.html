@@ -443,6 +443,9 @@ q{quotes:none}
   .lang .o2{font-size:12px}
 }
 @media (max-width:460px){ .tips{grid-template-columns:minmax(0,1fr)} .roster,.rules,.loop{gap:10px} .agent{padding:10px} .agent img{width:62%} .agent q{font-size:17px} .rl{padding:10px} .rl h4{font-size:19px} .demo{height:92px} .d-space i:last-child{display:none} .lang span{padding:4px 8px} }
+
+.credit{margin:14px 0 0;font-size:13.5px;line-height:1.6;color:var(--ink2);padding:10px 14px;border-radius:12px;background:#fff;border:1px solid var(--rule)}
+.credit a{color:var(--deep)}
 </style>
 </head>
 <body>
@@ -631,6 +634,8 @@ stock "graduation cap" clip art.</span></pre>
       <article class="tc"><img data-art="tool_loom" alt=""><div><h4>loom <small>textures</small></h4><p>Quiet background surfaces: chalkboard for Kids, linen paper for Adults, slate for Business.<span class="zh" hidden>低調的背景材質：兒童用黑板、成人用麻紙、商務用石板。</span></p><q>A seamless recycled-paper texture, very low contrast.</q></div></article>
       <article class="tc"><img data-art="tool_reel" alt=""><div><h4>reel <small>video</small></h4><p>Trailers and vertical shorts cut to the beat of your music: a course teaser, a summer-camp reel.<span class="zh" hidden>依音樂節拍剪輯的預告和直式短片：課程預告、夏令營短片。</span></p><q>A 20-second vertical teaser for Kids Summer Camp from these sprites.</q></div></article>
     </div>
+
+    <p class="credit">The six tools are open source (MIT). <b>vex, kiln, chirp, loom</b> and <b>reel</b> are by <a href="https://github.com/uilianks">uilianks</a>; <b>pxl</b> is uilianks’s fork of <a href="https://github.com/crsolver/claude-pxl">claude-pxl</a> by <a href="https://github.com/crsolver">crsolver</a>, which the whole family grew from.<span class="zh" hidden>這六種工具都是開源軟體（MIT 授權）。vex、kiln、chirp、loom 和 reel 由 uilianks 製作；pxl 是 uilianks 改寫自 crsolver 的 claude-pxl，整個工具家族都源自於它。</span></p>
 
     <div class="kicker">The owl, frame by frame<span class="zi" hidden>貓頭鷹，一格一格看</span></div>
     <div class="owlspread">
@@ -895,7 +900,7 @@ gh repo create my-site --private --source=. --push</pre>
       </div>
     </details>
 
-    <p class="colophon">STUDIO is an InkQuest Web Craft magazine made by Wen-Hung Fang, October 2026. Every illustration was drawn with vex, the owl sprite with pxl, and the music with chirp; the walkthrough video is animated from the same art.<span class="zh" hidden>本期所有插畫以 vex 繪製，貓頭鷹角色用 pxl、配樂用 chirp；示範影片用同一批插畫製作動畫。</span>
+    <p class="colophon">STUDIO is an InkQuest Web Craft magazine made by Wen-Hung Fang, October 2026. Every illustration was drawn with vex, the owl sprite with pxl, and the music with chirp; the walkthrough video is animated from the same art. vex, chirp, kiln, loom and reel are by <a href="https://github.com/uilianks">uilianks</a>; pxl is a fork of <a href="https://github.com/crsolver/claude-pxl">claude-pxl</a> by crsolver.<span class="zh" hidden>本期所有插畫以 vex 繪製，貓頭鷹角色用 pxl、配樂用 chirp；示範影片用同一批插畫製作動畫。vex、chirp、kiln、loom 和 reel 由 uilianks 製作；pxl 改寫自 crsolver 的 claude-pxl。</span>
       <br>Sources: <a href="https://code.claude.com/docs/en/sub-agents">Claude Code subagents</a> · <a href="https://docs.github.com/en/get-started/learning-about-github/githubs-plans">GitHub plans</a> · <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">Creating a Pages site</a> · <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG</a></p>
   </div>
 </section>
