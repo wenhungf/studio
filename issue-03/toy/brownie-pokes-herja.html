@@ -165,7 +165,7 @@ function bank() {
   audio(); const t = now(), got = S.pile
   S.total += got; S.best = Math.max(S.best, got)
   S.mode = "bank"; S.t0 = t; S.band = 0
-  play("softding", 0.3); floatText("+" + got)
+  play("softding", 0.15); floatText("+" + got)
   say(`Banked +${got}. Herja dozes off again.`, `收手！+${got}，灰灰又睡著了。`)
   hud()
   setTimeout(() => { S.round++; newRound() }, 1300)
@@ -177,7 +177,7 @@ function snap(t) {
   say(`Herja snapped! ${n === 1 ? "1 poke" : n + " pokes"} lost.`, `灰灰爆氣了！這回合${n}下都白戳了。`)
   const at = (s, f) => setTimeout(f, s * 1000)
   play("whoosh", 0.8); at(0.55, () => play("thwack")); at(0.75, () => play("v_up"))
-  at(3.0, () => play("softding", 0.27)); at(3.3, () => play("snore", 0.8))
+  at(3.0, () => play("softding", 0.14)); at(3.3, () => play("snore", 0.8))
   at(6.9, () => { S.round++; newRound() })
 }
 
